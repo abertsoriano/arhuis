@@ -222,6 +222,10 @@
 		display: inline-block;
 		margin-bottom: 15px;
 	}
+
+	.tab-content a {
+		margin-right: 0px;
+	}
 	
 	/*------------------------------------------*/
 	/*	 Logo Image    
@@ -306,7 +310,7 @@
 	/*	  TESTIMONIALS
 	/*------------------------------------------*/ 
 
-	.testimonial { padding: 0 10%; margin-bottom: 30px;}
+	.testimonial { padding: 0 10%; margin-bottom: 40px;}
 	
 	/*------------------------------------------*/
 	/*	 NEWSLETTER

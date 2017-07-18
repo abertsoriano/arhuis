@@ -927,7 +927,7 @@ a:focus {
 	background-color: #fff;
 	position: relative;
 	padding: 0;
-	margin: 0 0 40px;
+	margin: 0 0 20px;
 	border: 1px solid #e6e6e6;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -982,10 +982,7 @@ a:focus {
 
 .testimonial .testi-author {
 	display: inline-block;
-	padding: 0 0 0 15px;
 	text-align: left;
-	position: relative;
-	top: 10px;
 }
 
 .testimonial h4 {
