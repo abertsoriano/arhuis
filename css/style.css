@@ -180,7 +180,10 @@ a:focus {
 
 .navbar-brand {
 	padding: 0;
-}  
+}
+.navbar-brand img {
+	height: 60px;
+}
      
 /*------------------------------------------*/
 /*	 Navigation Menu    
@@ -207,11 +210,10 @@ a:focus {
 .navbar-nav > li > a {
 	color: #fff;
 	font-size: 14px;
-	line-height: 60px;
+	line-height: 30px;
 	font-weight: 600;
 	text-transform: uppercase;
 	display: block;
-	padding: 3 28px;
 	-webkit-transition: all 100ms ease-in-out;
 	-moz-transition: all 100ms ease-in-out;
 	-o-transition: all 100ms ease-in-out;
