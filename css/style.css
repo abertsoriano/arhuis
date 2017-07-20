@@ -1053,8 +1053,12 @@ a:focus {
    18. CONTACT-INFO 
    ========================================================================== */
 
-#contact-info {
+#contact-info, #contact-info2 {
 	padding-top: 80px;
+}
+#contact-info ol {
+	width: 200px;
+	margin-top: 35px;
 }
 
 /*------------------------------------------*/
