@@ -68,6 +68,9 @@
 	/*	 Navigation Menu
 	/*------------------------------------------*/
 
+	.navbar-header {
+		background-color: #642580;
+	}
 	.navbar-nav > li > a {padding: 0 10px; }
 
 	.navbar-brand img {
@@ -245,9 +248,15 @@
 	/*	 Responsive Menu
 	/*------------------------------------------*/
 	
-	.navbar-nav { margin: 0 -15px; border-top: 1px solid #444; background-color: #262626;}	
+	.navbar-nav { margin: 0 -15px; border-top: 1px solid #444; background-color: #262626;padding-bottom: 15px;}
 	.navbar-nav > li { text-align: center;}
-	.navbar-nav > li > a { line-height: 45px; text-align: center;}	
+	.navbar-nav > li > a { line-height: 45px; text-align: center;}
+
+	#navigation-menu {
+		margin-left: -15px;
+		margin-top: 4px;
+		margin-bottom: 0;
+	}
 	
 	/*------------------------------------------*/
 	/*	 INTRO CONTENT

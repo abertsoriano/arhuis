@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	margin: -100px 0 0 -100px;
 	width: 200px;
 	height: 200px;
-	background-image: url(../../img/icons/loader.GIF);
+	background-image: url(../img/icons/loader.GIF);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 70px 70px;
@@ -305,7 +305,7 @@ a:focus {
 /*------------------------------------------*/
 
 .overlay {
-	background-image: url(../../img/thumbs/overlay.png);
+	background-image: url(../img/thumbs/overlay.png);
 	background-color: rgba(0, 0, 0, 0.4); 
 	background-repeat: repeat;
 	height: 100%;
@@ -680,7 +680,7 @@ a:focus {
    ========================================================================== */
  
 #features {
-	background-image: url(../../img/parallax_bg/features.jpg);
+	background-image: url(../img/parallax_bg/features.jpg);
 	background-attachment: fixed !important;
 	background-repeat: repeat;
 	background-position: 0 0;
@@ -953,7 +953,7 @@ a:focus {
 .testi-arrow {
 	height: 32px;
 	width: 32px;
-	background-image: url(../../img/icons/testimonial-arrow-down.png);
+	background-image: url(../img/icons/testimonial-arrow-down.png);
 	background-attachment: scroll;
 	background-position: 0% 0%;
 	background-repeat: no-repeat;
@@ -1012,7 +1012,7 @@ a:focus {
    ========================================================================== */ 
 
 #promo_line {
-	background-image: url(../../img/parallax_bg/promo-line.jpg);
+	background-image: url(../img/parallax_bg/promo-line.jpg);
 	background-attachment: fixed !important;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -1158,7 +1158,7 @@ a:focus {
    ========================================================================== */
 
 #contact {
-	background-image: url(../../img/parallax_bg/contacts.jpg);
+	background-image: url(../img/parallax_bg/contacts.jpg);
 	background-attachment: fixed !important;
 	background-repeat: no-repeat;
 	background-position: bottom center;		
@@ -1348,7 +1348,7 @@ a:focus {
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
-	background-image: url(../../img/icons/back-to-top.png);
+	background-image: url(../img/icons/back-to-top.png);
 	background-repeat: no-repeat;
 	background-position: 50% 48%;
 	background-color:rgba(225, 196, 0, 0.85);	
