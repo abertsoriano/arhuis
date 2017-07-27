@@ -109,7 +109,6 @@
 				animationInSpeed: 200, // Animation in speed (ms)
 				animationOutSpeed: 200, // Animation out speed (ms)
 				scrollText: '', // Text for element
-				scrollImg: false, // Set true to use image
 				activeOverlay: false // Set CSS color to display scrollUp active point, e.g '#00FFFF'
 			};
 
@@ -170,23 +169,21 @@
 	/*----------------------------------------------------*/
 	
 	$(document).ready(function() {
-		
-		//Bootstraping variable
-		headerWrapper		= parseInt($('#navigation-menu').height());
-		offsetTolerance	= 300;
+		var headerWrapper		= parseInt($('#navigation-menu').height());
+		var offsetTolerance	= 300;
 		
 		//Detecting user's scroll
 		$(window).scroll(function() {
 		
 			//Check scroll position
-			scrollPosition	= parseInt($(this).scrollTop());
+			var scrollPosition	= parseInt($(this).scrollTop());
 			
 			//Move trough each menu and check its position with scroll position then add selected-nav class
 			$('.navbar-nav > li > a').each(function() {
 
-				thisHref				= $(this).attr('href');
-				thisTruePosition	= parseInt($(thisHref).offset().top);
-				thisPosition 		= thisTruePosition - headerWrapper - offsetTolerance;
+				var thisHref			= $(this).attr('href');
+				var thisTruePosition	= parseInt($(thisHref).offset().top);
+				var thisPosition 		= thisTruePosition - headerWrapper - offsetTolerance;
 
 				if(scrollPosition >= thisPosition) {
 					
@@ -196,9 +193,9 @@
 			});
 
 			//If we're at the bottom of the page, move pointer to the last section
-			bottomPage	= parseInt($(document).height()) - parseInt($(window).height());
+			var bottomPage	= parseInt($(document).height()) - parseInt($(window).height());
 			
-			if(scrollPosition == bottomPage || scrollPosition >= bottomPage) {
+			if(scrollPosition === bottomPage || scrollPosition >= bottomPage) {
 			
 				$('.selected-nav').removeClass('selected-nav');
 				$('navbar-nav > li > a:last').addClass('selected-nav');
@@ -246,24 +243,24 @@
 			};
 
 			if (options) {
-				if(options.override){
+				if (options.override) {
 					//if they choose to override, make sure the hash is there
-					options.override = (override('#') != -1)? options.override:'#' + options.override;
+					options.override = (override('#') !== -1) ? options.override : '#' + options.override;
 				}
 				$.extend( settings, options );
 			}
 
-			return this.each(function(i, el){
-				$(el).click(function(e){
+			return this.each(function(i, el) {
+				$(el).click(function(e) {
 					var idToLookAt;
 					if ($(el).attr('href').match(/#/) !== null) {
 						e.preventDefault();
 						idToLookAt = (settings.override)? settings.override:$(el).attr('href');//see if the user is forcing an ID they want to use
 						//if the browser supports it, we push the hash into the pushState for better linking later
-						if(history.pushState){
+						if (history.pushState) {
 							history.pushState(null, null, idToLookAt);
 							$('html,body').stop().animate({scrollTop: $(idToLookAt).offset().top + settings.offset}, settings.speed, settings.easing);
-						}else{
+						} else {
 							//if the browser doesn't support pushState, we set the hash after the animation, which may cause issues if you use offset
 							$('html,body').stop().animate({scrollTop: $(idToLookAt).offset().top + settings.offset}, settings.speed, settings.easing,function(e){
 								//set the hash of the window for better linking
@@ -274,7 +271,7 @@
 				});
 			});
 		};
-		  
+
 		$('#GoToHome, #GoToAbout, #GoToFeatures, #GoToWorks, #GoToTeam, #GoToPricing, #GoToBlog, #GoToContacts, #GoToJobForm' ).scrollTo({ speed: 1500 });
 
 	});
@@ -283,43 +280,39 @@
 	/*	Contact Form Validation
 	/*----------------------------------------------------*/
 	
-	$(document).ready(function(){
-	
-		"use strict";
-
+	$(document).ready(function() {
 		$("#contact-form").validate({
-			rules:{ 
+			rules:{
 				first_name:{
 					required: true,
 					minlength: 1,
-					maxlength: 16,
-					},
-					email:{
-						required: true,
-						email: true,
-					},
-					subject:{
-						required: true,
-						minlength: 4,
-						maxlength: 24,
-					},		
-					message:{
-						required: true,
-						minlength: 2,
-						}
-					},
-					messages:{
-							first_name:{
-								required: "Please enter no more than (1) characters"
-							}, 
-							email:{
-								required: "We need your email address to contact you",
-								email: "Your email address must be in the format of name@domain.com"
-							}, 
-							message:{
-								required: "Please enter no more than (2) characters"
-							}, 
-						}
-		});			
-		
+					maxlength: 16
+				},
+				email:{
+					required: true,
+					email: true
+				},
+				subject:{
+					required: true,
+					minlength: 4,
+					maxlength: 24
+				},
+				message:{
+					required: true,
+					minlength: 2
+				}
+			},
+			messages:{
+				first_name:{
+					required: "Please enter no more than (1) characters"
+				},
+				email:{
+					required: "We need your email address to contact you",
+					email: "Your email address must be in the format of name@domain.com"
+				},
+				message:{
+					required: "Please enter no more than (2) characters"
+				}
+			}
+		});
 	});
